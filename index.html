@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Côte Rôtie | French Bistro &amp; Artisanal Dining | Karachi</title>
+  <meta name="description" content="Experience French-inspired European elegance and artisanal dining at Côte Rôtie, nestled in the courtyard of Alliance Française de Karachi. Reserve your table today.">
+  <meta name="keywords" content="Côte Rôtie Karachi, French restaurant Karachi, Alliance Française dining, fine dining Karachi, French bistro Clifton, artisanal bakery Karachi">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Côte Rôtie | An Artful Approach to Dining">
+  <meta property="og:description" content="Discover exceptional cuisine, thoughtful details, and an atmosphere designed to make every visit memorable at Alliance Française de Karachi.">
+  <meta property="og:image" content="assets/hero-dish.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <!-- Google Fonts: Cormorant Garamond, Montserrat, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Alliance Française de Karachi, Block 8, Clifton</span>
+      </div>
+      <div class="top-bar-item desktop-only" id="liveStatusContainer">
+        <span class="status-indicator" id="statusDot"></span>
+        <span id="liveStatusText">Checking Hours...</span>
+      </div>
+      <div class="top-bar-item">
+        <a href="tel:+923162882880" class="top-bar-link">
+          <i class="fa-solid fa-phone"></i>
+          <span>+92 316 2882880</span>
+        </a>
+        <span class="divider-dot">·</span>
+        <a href="admin.html" class="top-bar-link admin-pill-link" title="Staff & Management Portal">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Staff Portal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-wrapper">
+      <!-- Brand Logo on Left -->
+      <a href="#home" class="brand-logo" aria-label="Côte Rôtie Home">
+        <img src="assets/logo.png" alt="Côte Rôtie - French Bistro Karachi" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu on Right -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#story" class="nav-link">Our Story</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#reservations" class="nav-link">Reservations</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#reservations" class="btn btn-primary btn-nav">Reserve a Table</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Trigger -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <img src="assets/logo.png" alt="Côte Rôtie" class="drawer-logo">
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Navigation Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#story" class="mobile-nav-link">Our Story</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#reservations" class="mobile-nav-link">Reservations</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="admin.html" class="mobile-nav-link highlight-admin"><i class="fa-solid fa-lock"></i> Staff / Admin Portal</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="#reservations" class="btn btn-primary btn-block">Reserve a Table</a>
+        <div class="drawer-contact-info">
+          <p><i class="fa-solid fa-phone"></i> +92 316 2882880</p>
+          <p><i class="fa-solid fa-envelope"></i> coterotiekhi@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-backdrop"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-subtitle-badge">
+          <span class="badge-line"></span>
+          <span class="badge-text">Alliance Française · Clifton, Karachi</span>
+          <span class="badge-line"></span>
+        </div>
+
+        <h1 class="hero-title">
+          An Artful Approach to <span class="highlight-text">Dining.</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover exceptional cuisine, thoughtful details, and an atmosphere designed to make every visit memorable.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-outline">Explore Our Menu</a>
+          <a href="#reservations" class="btn btn-primary">Reserve a Table</a>
+        </div>
+
+        <!-- Hero Highlights Bar -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-value">2015</span>
+            <span class="metric-label">Established in Clifton</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Artisanal Bakery In-House</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-value">Courtyard</span>
+            <span class="metric-label">Bistro &amp; Indoor Salon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="assets/ambiance-interior.jpg" alt="Côte Rôtie Bistro Interior with Suspended Bicycle in Karachi" class="hero-main-img">
+          <div class="hero-card-floating">
+            <div class="floating-icon"><i class="fa-solid fa-bicycle"></i></div>
+            <div class="floating-text">
+              <span class="floating-label">Authentic Bistro Vibe</span>
+              <span class="floating-title">Bicycle Salon &amp; Open Kitchen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#story" class="scroll-down-indicator" aria-label="Scroll to Our Story">
+      <span class="scroll-text">Discover</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="story-section section-padding" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <!-- Asymmetrical Left Column: Authentic Photography -->
+        <div class="story-visual-column">
+          <div class="story-img-wrapper main-story-img">
+            <img src="assets/ambiance-chalkboard.jpg" alt="Courtyard Garden with Specials Chalkboard at Alliance Française Karachi" class="story-photo">
+            <div class="story-badge">
+              <span class="story-badge-year">Est. Dec 2015</span>
+              <span class="story-badge-place">Alliance Française · Clifton</span>
+            </div>
+          </div>
+          <div class="story-secondary-card">
+            <img src="assets/ambiance-entrance.jpg" alt="Côte Rôtie Brick Wall Entrance with Metal CR Letters and Vintage Lamp" class="story-secondary-photo">
+            <div class="story-quote">
+              <p>“A sanctuary of European culinary calm hidden within the historic grounds of Alliance Française.”</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Right Column: Editorial Text -->
+        <div class="story-text-column">
+          <div class="section-tag">
+            <span class="crimson-dash"></span>
+            <span>OUR HERITAGE &amp; PHILOSOPHY</span>
+          </div>
+          
+          <h2 class="section-title">
+            Where Parisian Soul Meets <br>
+            <span class="italic-serif">Karachi’s Cultural Haven.</span>
+          </h2>
+
+          <p class="story-lead">
+            Founded in December 2015 by Head Chef Fahim Jaffer, Côte Rôtie was born out of a profound passion for rustic, honest French bistro dining and time-honored European culinary craftsmanship.
+          </p>
+
+          <p class="story-body">
+            Nestled inside the serene grounds of the Alliance Française de Karachi in Clifton, the restaurant is a quiet oasis away from the city's ceaseless momentum. Surrounded by sun-dappled courtyard foliage and classical French architecture, guests gather over handcrafted sourdough loaves baked fresh every morning, delicate French tartines, and meticulously finished mains.
+          </p>
+
+          <p class="story-body">
+            From our slow-simmered sauces to our renowned dark chocolate tart, every plate is an exploration of restraint, quality ingredients, and welcoming hospitality.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="story-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+              <div class="pillar-text">
+                <h4>Scratch-Made Daily</h4>
+                <p>Natural levain breads, brioches, and artisan patisserie crafted fresh in our kitchen.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-wine-glass"></i></div>
+              <div class="pillar-text">
+                <h4>Authentic Atmosphere</h4>
+                <p>Sunlit outdoor patio seating under bougainvillea and intimate candlelit indoor dining.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-cta">
+            <a href="#menu" class="btn btn-outline">Explore The Full Menu</a>
+            <a href="#contact" class="btn-text-link">Find Our Location <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Banner Interlude -->
+  <section class="editorial-banner">
+    <div class="container">
+      <div class="editorial-banner-content">
+        <span class="ornamental-symbol">❦</span>
+        <blockquote class="editorial-quote">
+          “Dining is not merely sustenance; it is a shared rhythm of unhurried conversation, genuine craft, and memorable flavors.”
+        </blockquote>
+        <cite class="editorial-author">— Côte Rôtie, Karachi</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Showcase Section -->
+  <section class="menu-section section-padding" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center-tag">
+          <span class="crimson-dash"></span>
+          <span>CURATED SELECTIONS</span>
+          <span class="crimson-dash"></span>
+        </div>
+        <h2 class="section-title">The Culinary Menu</h2>
+        <p class="section-subtitle">
+          An artful balance of classical French technique, artisanal baked goods, and contemporary continental favorites.
+        </p>
+
+        <!-- Category Tabs -->
+        <div class="menu-tabs" role="tablist">
+          <button class="menu-tab-btn active" data-category="cold" role="tab" aria-selected="true">
+            <i class="fa-solid fa-snowflake"></i> Cold Appetizers &amp; Salads
+          </button>
+          <button class="menu-tab-btn" data-category="hot" role="tab" aria-selected="false">
+            <i class="fa-solid fa-fire-burner"></i> Hot Plates &amp; Starters
+          </button>
+          <button class="menu-tab-btn" data-category="pasta" role="tab" aria-selected="false">
+            <i class="fa-solid fa-bowl-rice"></i> Handmade Pasta &amp; Risotto
+          </button>
+          <button class="menu-tab-btn" data-category="mains" role="tab" aria-selected="false">
+            <i class="fa-solid fa-drumstick-bite"></i> Mains &amp; Steaks
+          </button>
+          <button class="menu-tab-btn" data-category="sides" role="tab" aria-selected="false">
+            <i class="fa-solid fa-plate-wheat"></i> Sides
+          </button>
+          <button class="menu-tab-btn" data-category="desserts" role="tab" aria-selected="false">
+            <i class="fa-solid fa-cake-candles"></i> Desserts
+          </button>
+          <button class="menu-tab-btn" data-category="beverages" role="tab" aria-selected="false">
+            <i class="fa-solid fa-martini-glass-citrus"></i> Beverages
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Items Container (Populated via JS & Synced with Admin Panel) -->
+      <div class="menu-items-grid" id="menuItemsGrid">
+        <!-- Rendered dynamically via script.js from local store -->
+      </div>
+
+      <!-- Menu Footer Note -->
+      <div class="menu-footer-box">
+        <div class="menu-footer-icon"><i class="fa-solid fa-circle-info"></i></div>
+        <div class="menu-footer-text">
+          <p>All prices are listed in Pakistani Rupees (PKR) as per Côte Rôtie’s authentic à la carte menu. Subject to applicable government sales tax. Inform your server of any dietary allergies. For special group degustation bookings, please reserve in advance.</p>
+        </div>
+        <div class="menu-footer-actions">
+          <button type="button" class="btn btn-outline btn-sm open-menu-card-btn" data-menu-card="assets/menu-dinner.png" data-menu-title="Official Côte Rôtie Dinner Menu" data-menu-caption="Authentic à la carte dinner menu card with authentic pricing in PKR.">
+            <i class="fa-solid fa-file-invoice"></i> View Dinner Menu Card
+          </button>
+          <button type="button" class="btn btn-outline btn-sm open-menu-card-btn" data-menu-card="assets/menu-beverages.png" data-menu-title="Official Côte Rôtie Beverages & Breads" data-menu-caption="Authentic artisanal coffee, teas, juices, shakes, and takeaway breads menu card in PKR.">
+            <i class="fa-solid fa-mug-hot"></i> View Beverages Menu Card
+          </button>
+          <a href="#reservations" class="btn btn-primary btn-sm">Book a Table for Dinner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food & Restaurant Gallery Section -->
+  <section class="gallery-section section-padding" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center-tag">
+          <span class="crimson-dash"></span>
+          <span>AUTHENTIC RESTAURANT AMBIANCE</span>
+          <span class="crimson-dash"></span>
+        </div>
+        <h2 class="section-title">Gallery &amp; Dining Spaces</h2>
+        <p class="section-subtitle">
+          Authentic moments from our bicycle-themed indoor salon, candlelit tables, lush courtyard terrace, and culinary creations in Karachi.
+        </p>
+
+        <!-- Gallery Filters -->
+        <div class="gallery-filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Moments</button>
+          <button class="filter-btn" data-filter="ambiance">Restaurant Ambiance</button>
+          <button class="filter-btn" data-filter="cuisine">Artful Cuisine &amp; Specials</button>
+          <button class="filter-btn" data-filter="bakery">Bakery &amp; Pâtisserie</button>
+        </div>
+      </div>
+
+      <!-- Balanced Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Item 1: Authentic Dining Salon -->
+        <div class="gallery-item" data-category="ambiance">
+          <div class="gallery-card">
+            <img src="assets/ambiance-interior.jpg" alt="Côte Rôtie Main Dining Salon with Suspended Bicycle" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Interior Salon</span>
+              <h3 class="gallery-title">The Bicycle Dining Salon</h3>
+              <p class="gallery-desc">Warm brick walls, open kitchen, and rattan bistro chairs.</p>
+              <button class="gallery-zoom-btn" data-img="assets/ambiance-interior.jpg" data-title="The Bicycle Dining Salon" data-caption="Authentic Indoor Dining Room · Côte Rôtie Karachi" aria-label="View larger image">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Candlelit Table Setting -->
+        <div class="gallery-item" data-category="ambiance">
+          <div class="gallery-card">
+            <img src="assets/ambiance-table-menu.jpg" alt="Candlelit Table with Fresh Roses and Côte Rôtie Menu" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Evening Ambiance</span>
+              <h3 class="gallery-title">Candlelight &amp; Fresh Roses</h3>
+              <p class="gallery-desc">The authentic Côte Rôtie dinner setting and evening service.</p>
+              <button class="gallery-zoom-btn" data-img="assets/ambiance-table-menu.jpg" data-title="Candlelight &amp; Fresh Roses" data-caption="Evening Table Atmosphere · Alliance Française Karachi" aria-label="View larger image">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Courtyard Specials Board -->
+        <div class="gallery-item" data-category="cuisine">
+          <div class="gallery-card">
+            <img src="assets/ambiance-chalkboard.jpg" alt="Lush Garden Courtyard and Specials Chalkboard" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Garden &amp; Specials</span>
+              <h3 class="gallery-title">Courtyard &amp; Daily Specials</h3>
+              <p class="gallery-desc">Lush oleanders, bougainvillea, and hand-written seasonal board.</p>
+              <button class="gallery-zoom-btn" data-img="assets/ambiance-chalkboard.jpg" data-title="Courtyard &amp; Daily Specials" data-caption="Outdoor Terrace at Alliance Française Karachi" aria-label="View larger image">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Brick Entrance -->
+        <div class="gallery-item" data-category="ambiance">
+          <div class="gallery-card">
+            <img src="assets/ambiance-entrance.jpg" alt="Côte Rôtie Brick Entrance with Metal CR Monogram" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Architectural Facade</span>
+              <h3 class="gallery-title">The Historic Entrance</h3>
+              <p class="gallery-desc">Charcoal brick walls, vintage sconce, and metal CR letters.</p>
+              <button class="gallery-zoom-btn" data-img="assets/ambiance-entrance.jpg" data-title="The Historic Entrance" data-caption="Alliance Française de Karachi · Côte Rôtie Entrance" aria-label="View larger image">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: In-House Sourdough -->
+        <div class="gallery-item" data-category="bakery">
+          <div class="gallery-card">
+            <img src="assets/bread.jpg" alt="Artisanal Wild Sourdough Bread Baked In-House Daily" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">In-House Bakery</span>
+              <h3 class="gallery-title">Wild Levain Sourdough</h3>
+              <p class="gallery-desc">Baked every morning on site with whipped French butter.</p>
+              <button class="gallery-zoom-btn" data-img="assets/bread.jpg" data-title="Wild Levain Sourdough" data-caption="Scratch-Made Daily Breads · Côte Rôtie Bakery" aria-label="View larger image">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Signature Dessert -->
+        <div class="gallery-item" data-category="bakery">
+          <div class="gallery-card">
+            <img src="assets/dessert.jpg" alt="Signature Valrhona Dark Chocolate Ganache Tart" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Haute Pâtisserie</span>
+              <h3 class="gallery-title">Valrhona Chocolate Tart</h3>
+              <p class="gallery-desc">Rich dark chocolate silk ganache with gold leaf and berries.</p>
+              <button class="gallery-zoom-btn" data-img="assets/dessert.jpg" data-title="Valrhona Chocolate Tart" data-caption="Signature Haute Pâtisserie · Côte Rôtie" aria-label="View larger image">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="lightbox-media-wrap">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      </div>
+      <div class="lightbox-details">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservations Section -->
+  <section class="reservations-section section-padding" id="reservations">
+    <div class="container">
+      <div class="reservations-wrapper">
+        <div class="reservations-info-panel">
+          <div class="section-tag">
+            <span class="crimson-dash"></span>
+            <span>TABLE RESERVATIONS</span>
+          </div>
+          <h2 class="section-title">Reserve Your <br><span class="italic-serif">Experience</span></h2>
+          <p class="reservation-intro">
+            We welcome intimate dinners, family celebrations, business luncheons, and unhurried weekend brunches. Because seating in our garden courtyard is limited, advance reservation is recommended.
+          </p>
+
+          <div class="reservation-features">
+            <div class="res-feature-item">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <div>
+                <h5>Seating Options</h5>
+                <p>Choose between our sun-dappled courtyard garden or our air-conditioned indoor salon.</p>
+              </div>
+            </div>
+            <div class="res-feature-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <h5>Service Hours</h5>
+                <p>Lunch: 12:30 PM – 4:00 PM<br>Dinner: 7:00 PM – 11:00 PM (Tue – Sun)</p>
+              </div>
+            </div>
+            <div class="res-feature-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h5>Direct Assistance</h5>
+                <p>For parties of 8 or more, please call our maître d’ directly at <strong>+92 316 2882880</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reservation-assurance">
+            <i class="fa-solid fa-shield-heart"></i>
+            <span>All reservations submitted here are immediately recorded in our restaurant dashboard.</span>
+          </div>
+        </div>
+
+        <!-- Reservation Form -->
+        <div class="reservations-form-panel">
+          <div class="form-card">
+            <div class="form-header">
+              <h3>Table Booking Request</h3>
+              <p>Please provide your booking details below</p>
+            </div>
+
+            <form id="reservationForm" class="reservation-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resName">Full Name <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="resName" name="name" placeholder="e.g. Ayesha Khan" required>
+                  </div>
+                  <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="resPhone">Phone Number <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" id="resPhone" name="phone" placeholder="0316 2882880" required>
+                  </div>
+                  <span class="error-msg" id="phoneError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resEmail">Email Address <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="resEmail" name="email" placeholder="ayesha@example.com" required>
+                  </div>
+                  <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="resGuests">Number of Guests <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                    <select id="resGuests" name="guests" required>
+                      <option value="1">1 Guest (Solo Table)</option>
+                      <option value="2" selected>2 Guests (Romantic Table)</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests (Standard Dining)</option>
+                      <option value="5">5 Guests</option>
+                      <option value="6">6 Guests (Large Table)</option>
+                      <option value="7">7 Guests</option>
+                      <option value="8">8 Guests (Banquet)</option>
+                      <option value="10">10+ Guests (Private Area)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resDate">Preferred Date <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-calendar"></i>
+                    <input type="date" id="resDate" name="date" required>
+                  </div>
+                  <span class="error-msg" id="dateError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="resTime">Preferred Time <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-clock"></i>
+                    <select id="resTime" name="time" required>
+                      <optgroup label="Lunch Service">
+                        <option value="12:30 PM">12:30 PM</option>
+                        <option value="01:00 PM">01:00 PM</option>
+                        <option value="01:30 PM">01:30 PM</option>
+                        <option value="02:00 PM">02:00 PM</option>
+                        <option value="02:30 PM">02:30 PM</option>
+                      </optgroup>
+                      <optgroup label="Dinner Service">
+                        <option value="07:30 PM">07:30 PM</option>
+                        <option value="08:00 PM" selected>08:00 PM</option>
+                        <option value="08:30 PM">08:30 PM</option>
+                        <option value="09:00 PM">09:00 PM</option>
+                        <option value="09:30 PM">09:30 PM</option>
+                        <option value="10:00 PM">10:00 PM</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resSeating">Seating Preference</label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-chair"></i>
+                  <select id="resSeating" name="seating">
+                    <option value="Courtyard Garden">Courtyard Garden Terrace (Outdoor)</option>
+                    <option value="Indoor Salon">Main Dining Salon (Indoor AC)</option>
+                    <option value="Any Available">First Available Preferred</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resNotes">Special Requests or Occasion</label>
+                <textarea id="resNotes" name="notes" rows="2" placeholder="Anniversary, birthday, dietary requirements, or quiet corner..."></textarea>
+              </div>
+
+              <!-- Frontend Notice -->
+              <p class="form-disclaimer">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <em>This reservation form is an interactive online request connected to the Côte Rôtie Admin System. A reference code will be generated upon submission.</em>
+              </p>
+
+              <button type="submit" class="btn btn-primary btn-block btn-submit" id="resSubmitBtn">
+                <span>Request a Reservation</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="confirmation-modal" id="confirmationModal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <div class="modal-icon-badge">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="modal-title">Reservation Request Received</h3>
+      <p class="modal-subtitle">Thank you for choosing Côte Rôtie, Karachi.</p>
+
+      <div class="reservation-summary" id="reservationSummary">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="modal-notice-box">
+        <p><strong>Status:</strong> Logged into Management System.</p>
+        <p>Our restaurant host will verify your table allocation. You can review and manage this booking directly in the <a href="admin.html" class="inline-admin-link">Staff Admin Panel</a>.</p>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="modalCloseBtn">Close Window</button>
+        <a href="admin.html" class="btn btn-primary">View in Admin Panel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact and Location Section -->
+  <section class="contact-section section-padding" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center-tag">
+          <span class="crimson-dash"></span>
+          <span>GET IN TOUCH</span>
+          <span class="crimson-dash"></span>
+        </div>
+        <h2 class="section-title">Location &amp; Inquiries</h2>
+        <p class="section-subtitle">
+          Located within the cultural compound of Alliance Française in the Kehkashan precinct of Clifton, Karachi.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details Card -->
+        <div class="contact-card info-card">
+          <div class="contact-brand-header">
+            <img src="assets/logo.png" alt="Côte Rôtie" class="contact-logo">
+            <p class="contact-tagline">French Bistro &amp; Artisanal Dining</p>
+          </div>
+
+          <div class="contact-items-list">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-detail">
+                <h5>Physical Address</h5>
+                <p>Alliance Française de Karachi, Plot/St-1, Block 8, Kehkashan, Clifton, Karachi, Pakistan</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-detail">
+                <h5>Phone &amp; WhatsApp</h5>
+                <p><a href="tel:+923162882880">+92 316 2882880</a> / 0316-2882880</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-detail">
+                <h5>Email Inquiries</h5>
+                <p><a href="mailto:coterotiekhi@gmail.com">coterotiekhi@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+              <div class="contact-detail">
+                <h5>Hours of Operation</h5>
+                <p><strong>Tuesday – Sunday:</strong> 12:30 PM – 11:00 PM</p>
+                <p><strong>Monday:</strong> Closed for private preparation</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contact-detail">
+                <h5>Social Media</h5>
+                <p><a href="https://www.instagram.com/coterotiekhi/" target="_blank" rel="noopener noreferrer">@coterotiekhi (Instagram)</a></p>
+                <p><a href="https://www.facebook.com/coterotiekhi/" target="_blank" rel="noopener noreferrer">Côte Rôtie | Karachi (Facebook)</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Inquiry Form -->
+        <div class="contact-card form-card">
+          <h3>Send Us a Message</h3>
+          <p>For private catering, screenings, event buyouts, or culinary inquiries:</p>
+
+          <form id="contactForm" class="contact-inquiry-form" novalidate>
+            <div class="form-group">
+              <label for="contactName">Your Name <span class="required">*</span></label>
+              <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactEmail">Email Address <span class="required">*</span></label>
+                <input type="email" id="contactEmail" name="email" placeholder="name@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="0300 1234567">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Private Event, Feedback, etc.">
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message <span class="required">*</span></label>
+              <textarea id="contactMessage" name="message" rows="4" placeholder="How may we assist you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="contactSubmitBtn">
+              <span>Send Message</span>
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <div class="contact-form-feedback" id="contactFeedback"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Verified Google Map Embed -->
+      <div class="map-embed-wrapper">
+        <div class="map-header">
+          <div class="map-title-wrap">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Interactive Map · Alliance Française de Karachi, Clifton</span>
+          </div>
+          <a href="https://maps.google.com/?q=Alliance+Francaise+de+Karachi" target="_blank" rel="noopener noreferrer" class="btn-text-link">
+            Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+        <div class="map-iframe-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.8986872583857!2d67.03057867599026!3d24.83226294635817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33dc05e04cb27%3A0x6002f5db09697e93!2sAlliance%20Fran%C3%A7aise%20de%20Karachi!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+            width="100%" 
+            height="380" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Côte Rôtie at Alliance Française Karachi">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimalist Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo-link">
+          <img src="assets/logo.png" alt="Côte Rôtie" class="footer-logo-img">
+        </a>
+        <p class="footer-brand-statement">
+          An artful approach to contemporary French dining, artisanal breads, and unhurried hospitality.
+        </p>
+
+        <!-- Social Media Links -->
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/coterotiekhi/" target="_blank" rel="noopener noreferrer" aria-label="Côte Rôtie on Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/coterotiekhi/" target="_blank" rel="noopener noreferrer" aria-label="Côte Rôtie on Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="mailto:coterotiekhi@gmail.com" aria-label="Email Côte Rôtie">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="tel:+923162882880" aria-label="Call Côte Rôtie">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-wrap">
+        <ul class="footer-nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reservations">Reservations</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="admin.html" class="admin-footer-link"><i class="fa-solid fa-shield-halved"></i> Staff Admin Panel</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; <span id="currentYear">2026</span> Côte Rôtie Karachi. All Rights Reserved.</p>
+          <p class="footer-address-line">Alliance Française de Karachi, Plot/St-1, Block 8, Kehkashan, Clifton, Karachi, Pakistan</p>
+        </div>
+        <div class="footer-badge">
+          <span>Head Chef Fahim Jaffer · Established 2015</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Booking Button (Mobile & Desktop) -->
+  <a href="#reservations" class="floating-reservation-cta" id="floatingCta" aria-label="Book Table">
+    <i class="fa-solid fa-calendar-check"></i>
+    <span class="floating-cta-text">Book a Table</span>
+  </a>
+
+  <!-- ==========================================================================
+       AI Concierge Chatbot Widget (Powered by Google Gemini 3)
+       ========================================================================== -->
+  <div class="ai-concierge-widget" id="aiConciergeWidget">
+    <!-- Floating 3D Animated Trigger Button -->
+    <button type="button" class="ai-chat-btn" id="aiChatToggleBtn" aria-label="Open Côte Rôtie AI Concierge" aria-expanded="false">
+      <span class="ai-btn-pulse"></span>
+      <span class="ai-btn-surface">
+        <i class="fa-solid fa-sparkles ai-sparkle-icon"></i>
+        <i class="fa-solid fa-comments ai-bot-icon"></i>
+      </span>
+      <span class="ai-badge-indicator" aria-hidden="true">1</span>
+      <span class="ai-btn-tooltip">Chat with AI Concierge</span>
+    </button>
+
+    <!-- Chat Modal Window -->
+    <div class="ai-chat-modal" id="aiChatModal" role="dialog" aria-modal="true" aria-labelledby="aiChatTitle" aria-hidden="true">
+      <div class="ai-chat-header">
+        <div class="ai-concierge-profile">
+          <div class="ai-avatar-wrap">
+            <span class="ai-avatar-icon"><i class="fa-solid fa-utensils"></i></span>
+            <span class="ai-status-dot online" title="Online · Ready to assist"></span>
+          </div>
+          <div class="ai-profile-meta">
+            <div class="ai-profile-title" id="aiChatTitle">
+              <h4>Élodie · Côte Rôtie AI</h4>
+              <span class="ai-model-tag">Gemini 3</span>
+            </div>
+            <p class="ai-profile-subtitle">Alliance Française Karachi · Concierge</p>
+          </div>
+        </div>
+
+        <div class="ai-header-controls">
+          <button type="button" class="ai-ctrl-btn" id="aiConfigBtn" title="Cloudflare Proxy Settings" aria-label="Settings">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <button type="button" class="ai-ctrl-btn" id="aiResetChatBtn" title="Reset Conversation" aria-label="Clear chat">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+          <button type="button" class="ai-ctrl-btn ai-close-btn" id="aiCloseChatBtn" title="Close Chat" aria-label="Close chat">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Settings Dropdown Panel -->
+      <div class="ai-settings-panel" id="aiSettingsPanel" hidden>
+        <div class="ai-settings-inner">
+          <h5><i class="fa-solid fa-shield-halved"></i> Cloudflare Proxy Connection</h5>
+          <p>For GitHub Pages, requests route through your free Cloudflare Worker proxy where your Gemini API key is kept secure.</p>
+          <label for="aiWorkerUrlInput">Cloudflare Worker Proxy URL:</label>
+          <div class="ai-input-group">
+            <input type="url" id="aiWorkerUrlInput" placeholder="https://coterotie-gemini-proxy.workers.dev" spellcheck="false">
+            <button type="button" class="btn btn-sm btn-primary" id="aiSaveWorkerUrlBtn">Save &amp; Test</button>
+          </div>
+          <div class="ai-settings-status" id="aiSettingsStatus"></div>
+          <div class="ai-settings-hint">
+            <span>Testing locally? Launch <code>python private/local_proxy.py</code> and set <code>http://127.0.0.1:8787</code>.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="ai-suggestion-bar">
+        <div class="ai-chips-scroll">
+          <button type="button" class="ai-chip" data-prompt="What are your signature dishes and prices in PKR?">🍽️ Signature Dishes &amp; Prices</button>
+          <button type="button" class="ai-chip" data-prompt="What are your operating hours and is Monday open?">🕒 Timings &amp; Monday Info</button>
+          <button type="button" class="ai-chip" data-prompt="How can I book a table for dinner?">🪑 Reserve a Table</button>
+          <button type="button" class="ai-chip" data-prompt="What vegetarian dishes do you recommend?">🥗 Vegetarian Options</button>
+          <button type="button" class="ai-chip" data-prompt="Aap ka address aur timing kya hai?">🇵🇰 Roman Urdu: Timing &amp; Address</button>
+        </div>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div class="ai-chat-body" id="aiChatBody">
+        <!-- Dynamic conversation messages rendered via chat.js -->
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="ai-typing-indicator" id="aiTypingIndicator" hidden>
+        <div class="ai-typing-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="ai-typing-label">Élodie is thinking...</span>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="ai-chat-footer">
+        <form class="ai-input-form" id="aiChatForm">
+          <textarea id="aiMessageInput" rows="1" placeholder="Ask about dishes, prices, bookings, timings..." aria-label="Type message" maxlength="1000"></textarea>
+          <button type="submit" class="ai-send-btn" id="aiSendBtn" aria-label="Send message" disabled>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <div class="ai-footer-note">
+          <span>Replies in English, Roman Urdu &amp; اردو · Verified info only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript & AI Concierge -->
+  <script src="script.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

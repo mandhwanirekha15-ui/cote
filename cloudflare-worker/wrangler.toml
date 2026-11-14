@@ -1,0 +1,7 @@
+name = "coterotie-gemini-proxy"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# NOTE: Set your Gemini API key secret by running:
+# npx wrangler secret put GEMINI_API_KEY
+# (Do NOT write your secret key in this file!)
